@@ -1,0 +1,13 @@
+top:查看系统状态
+
+串口通信调试，需要连接serial4/5，ubuntu下用screen，windows下用teraterm
+
+system console 与mavlink shell区别
+
+传感器校正 （需要多看，注意细节）
+
+2020-9-27
+HEADLESS=1 make px4_sitl gazebo_plane  不带gazebo ui启动
+
+
+
