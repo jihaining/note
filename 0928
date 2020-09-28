@@ -1,10 +1,15 @@
-repository
+学习了git的操作
+本地仓库分三部：工作区，暂存区，仓库；
+远程仓库
 
-men
-C
+工作区到暂存区：git add 0928
+暂存区到仓库：git commit -m "add 0928"
 
-Cwq
-wqwqqwwqwqwwqqqwwwq:wq
+本地仓库提交到远程仓库 ：git push 
+
+git remote add origin https://github.com/lixiuxiu2017/TestGit.git
+
+git push -u origin master（由于新建的GitHub仓库是空的，所以第一次推送master分支时需要加-u参数，以后再推送就不用加了）
 
 
 
