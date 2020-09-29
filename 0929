@@ -15,7 +15,23 @@ orb_subscribe copy
 在cmakelist里会出现
 在build里src/module/uorb/topics下面会出现自动生成的对应.c文件
 
+安装markdown
+其中插件 markdown all in one 快捷键与自动保存
+markdown preview enhanced 看见格式之后的效果图
+paste image 插入图片
+limfx CodeEx 快速把文章发布到
+code spell checker 检查英文
+
 #测试自己添加的msg消息
+陀螺仪 高动态特性
+加速度计 横滚角，俯仰角，无法感受偏航的存在？？
+磁力计 感受不到横滚的存在？？
+
+四元数微分方程:Q导数 = 0.5 * Q * W；
+
+
+
+
 
 
  
