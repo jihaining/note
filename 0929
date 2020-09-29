@@ -1,1 +1,19 @@
-121
+orb_advertise  publish 
+orb_subscribe copy
+
+消息队列只能放一个消息
+
+地面站与飞机：mavlink
+飞机内部:uorb （进程间通信机制，相当于多个进程打开同一个设备文件）
+飞机与遥控器：另一个编解码
+
+消息总线上的数据是topic，对应message
+一个主题仅包含一种消息类型，通俗点就是数据类型
+
+
+在message里添加.msg
+在cmakelist里会出现
+在build里src/module/uorb/topics下面会出现自动生成的对应.c文件
+
+
+ 
