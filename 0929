@@ -15,5 +15,7 @@ orb_subscribe copy
 在cmakelist里会出现
 在build里src/module/uorb/topics下面会出现自动生成的对应.c文件
 
+#测试自己添加的msg消息
+
 
  
