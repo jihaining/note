@@ -1,0 +1,33 @@
+1---------------------
+git branch 查看代码版本号
+git checkout v1.10.0  切换到版本1。10。0
+git checkout master 切换到最新的master
+
+2-----------------------
+QGC UDP bind failed: Cannot assign requested address, aborting
+运行SITL需要把HITL设置下的串口等复原
+
+3------------------------------------
+报错：
+E: Could not get lock /var/lib/dpkg/lock - open (11: Resource temporarily unavailable)
+E: Unable to lock the administration directory (/var/lib/dpkg/), is another process using it?
+
+问题的原因：
+在termial下，用apt install 安装软件的时候，如果在未完成下载的情况下将terminal close（也有可能你在使用git时，发现git报错显示没有安装，然后你就直接使用sudo install git 来解决这个问题，而此时git没有退出）。此时 apt 进程可能没有结束。结果，如果再次运行apt install 命令安装软件时，出现如上错误。即有另一个程序正在占用apt install进程，由于它在运行时，会占用软件源更新时的系统锁（简称‘系统更新锁’），此时资源被锁。
+
+解决：强制解锁
+sudo rm /var/cache/apt/archives/lock
+sudo rm /var/lib/dpkg/lock
+
+4---------------------------------------
+切换分支之后重新make
+需要git submodule sync --recursive
+git submodule update --init --recursive
+
+5-------------------------------------
+硬件在环HITL今天还没有解决
+jmavsimSITL可以，gazebo突然不行了，
+首先重新git clone了firmware ，bash之后会卡住在gazebo中
+
+
+
