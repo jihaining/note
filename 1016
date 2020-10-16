@@ -1,0 +1,19 @@
+1--------------------------------------------
+解决：
+查看github中issues和https://discuss.px4.io/t/gazebo-hitl-not-working/9705
+
+Are you using px4_fmu-v2_default?
+If yes it doesn’t compile pwm_out_sim and you need to enable it:？？
+在编译文件里面 pwm_out_sim
+https://discuss.px4.io/t/jmavsim-prints-init-mavlink-repeatedly/9128
+pixhawk的v2内存较小
+https://github.com/PX4/Firmware/issues/10899
+
+主要问题是
+1：：iris.world在新版本里面没有了，但是在手册里没有更新
+2：：取消pwm_out_sim注释，然后重新烧写到pixhawk里
+3：：最新的版本make px4_fmu-v2_default不成功，但是make px4_sitl gazebo成功
+4：：在v1.10.0里面make px4_fmu-v2_default成功，但是make px4_sitl gazebo不成功
+5：：取消安全开关，safety设置为22027
+6：：只需要一根线连接到pixhawk就行，当连接上会出现蓝色的灯缓慢的亮熄灭
+
