@@ -1,0 +1,12 @@
+1---------------------------------------------
+首先，使用git status指令查看当前文件状态。
+然后，使用git stash指令将本次修改部分缓存到本地。
+再次使用git status指令，查看当前文件状态，系统提示没有需要提交的内容。
+使用git stash list指令，查看本地当前的缓存列表。
+使用指令“git stash apply stash@{id}”，恢复指定id的stash内容，同时不会删除恢复的缓存条目。
+使用指令“git stash pop”，恢复最近的缓存到当前文件中，同时删除恢复的缓存条目。
+2-----------------------------------------------------
+https://github.com/PX4/Firmware/pull/13597/commits/097dc826d42ecef835e12f46fb3c90818f29198a
+https://github.com/PX4/Firmware/issues/13595
+plane_hitl实现
+
